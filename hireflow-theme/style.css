@@ -1,0 +1,156 @@
+/**
+ * Theme Name: HireFlow
+ * Text Domain: hireflow
+ * Description: Job Application Tracker Theme for WordPress.
+ * Version: 1.0.0
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --hf-primary: #0D1B2A;
+  --hf-secondary: #1E3A5F;
+  --hf-accent: #00C9A7;
+  --hf-accent-hover: #00A589;
+  --hf-bg: #06101A;
+  --hf-card-bg: #112236;
+  --hf-text-primary: #E8F0FE;
+  --hf-text-muted: #8BA3C7;
+  --hf-success: #28A745;
+  --hf-warning: #FFC107;
+  --hf-danger: #DC3545;
+  --hf-info: #17A2B8;
+  
+  --hf-radius-card: 12px;
+  --hf-radius-input: 8px;
+  --hf-radius-btn: 6px;
+  
+  --hf-transition: all 0.3s ease;
+  
+  --hf-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Base Styles & Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--hf-bg);
+  color: var(--hf-text-primary);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: 600;
+  color: var(--hf-text-primary);
+}
+
+a {
+  color: var(--hf-accent);
+  text-decoration: none;
+  transition: var(--hf-transition);
+}
+
+a:hover {
+  color: var(--hf-accent-hover);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Typography Scale */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+/* Utilities */
+.hf-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hf-card {
+  background-color: var(--hf-card-bg);
+  border-radius: var(--hf-radius-card);
+  padding: 1.5rem;
+  box-shadow: var(--hf-shadow);
+}
+
+/* Buttons */
+.hf-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--hf-radius-btn);
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: var(--hf-transition);
+}
+
+.hf-btn-primary {
+  background-color: var(--hf-accent);
+  color: #fff;
+}
+.hf-btn-primary:hover {
+  background-color: var(--hf-accent-hover);
+  color: #fff;
+}
+
+.hf-btn-secondary {
+  background-color: var(--hf-secondary);
+  color: var(--hf-text-primary);
+}
+.hf-btn-secondary:hover {
+  background-color: #274b7a;
+  color: #fff;
+}
+
+.hf-btn-danger {
+  background-color: var(--hf-danger);
+  color: #fff;
+}
+.hf-btn-danger:hover {
+  background-color: #c82333;
+  color: #fff;
+}
+
+/* Badges */
+.hf-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Footer Styles */
+.hf-footer {
+  background-color: var(--hf-primary);
+  padding: 3rem 0 1.5rem;
+  margin-top: 4rem;
+}
+
+/* Grid Helpers */
+.hf-grid { display: grid; gap: 1.5rem; }
+.hf-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.hf-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.hf-grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 768px) {
+  .hf-grid-2, .hf-grid-3, .hf-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
